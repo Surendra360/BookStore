@@ -1,6 +1,67 @@
 <%- include("./partials/header") %>
-<div class="main p-4">
-  <h2>Add New Book</h2>
+<div class="main p-5">
+  <h2 class="mb-5 text-center">New Book Entry</h2>
+  <div class=" d-flex justify-content-center">
+
+    <form class="p-4 row g-3 w-75 rounded bg-primary-subtle" action="/create" method="post">
+
+        <div class="col-md-6 mb-2">
+          <label for="inputBook" class="form-label">Book Name</label>
+          <input name="name" type="email" class="form-control" id="inputBook">
+        </div>
+        <div class="col-md-6 mb-2">
+          <label for="inputAuthor" class="form-label">Author Name</label>
+          <input name="author" type="password" class="form-control" id="inputAuther">
+        </div>
+        <div class="col-md-3 mb-2">
+          <label for="inputPrice" class="form-label">Book Price</label>
+          <input name="price" type="number" class="form-control" id="inputPrice" placeholder="MRP">
+        </div>
+        <div class="col-md-3 mb-2">
+          <label for="inputQuantity" class="form-label">Book Quantity</label>
+          <input name="quantity" type="number" class="form-control" id="inputQuantity">
+        </div>
+        <div class="col-md-6 mb-2">
+          <label for="inputCategory" class="form-label">Book Category</label>
+          <input name="category" type="text" class="form-control" id="inputCategory">
+        </div>
+        <div class="col-md-6 mb-2">
+          <label for="inputLanguage" class="form-label">Book Language</label>
+          <select id="inputLanguage" class="form-select">
+            <option selected>Select any one</option>
+            <option >Hindi</option>
+            <option>English</option>
+            <option>Punjabi</option>
+            <option>Malyalam</option>
+          </select>
+        </div>
+        <div class="col-md-6 mb-2">
+          <label for="inputSerial" class="form-label">Serial Number</label>
+          <input type="text" class="form-control" id="inputSerial">
+        </div>
+        <div class="col-12 mb-2">
+          <label for="inputSerial" class="form-label">Description</label>
+          <textarea type="text" class="form-control" id="inputSerial" placeholder="Enter about the book"></textarea>
+        </div>
+        <div class="col-12 mb-2">
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" id="gridCheck">
+            <label class="form-check-label" for="gridCheck">
+              Please check the book details is aorrectly.
+            </label>
+          </div>
+        </div>
+        <div class="col-12">
+          <button type="submit" class="btn btn-primary">Add Book</button>
+        </div>
+
+    </form>
+    
+  </div>
 </div>
+
+
+
+
 <%- include("./partials/footer") %>
 
